@@ -2,155 +2,211 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>SecureScan | فحص أمني احترافي</title>
+<title>SecureScan | Cyber Security Audit</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #020617;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #020617, #000);
   color: #e5e7eb;
-  line-height: 1.7;
 }
 
-header {
-  background: linear-gradient(135deg, #020617, #020617);
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 70px 20px;
+  padding: 20px;
 }
 
-header h1 {
-  font-size: 3rem;
+.hero h1 {
+  font-size: 3.8rem;
   color: #38bdf8;
-  margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 
-header p {
-  font-size: 1.1rem;
-  opacity: 0.9;
+.hero p {
+  max-width: 700px;
+  font-size: 1.2rem;
+  opacity: 0.85;
 }
 
+.hero button {
+  margin-top: 30px;
+  padding: 15px 40px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SECTIONS */
 section {
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 90px 30px;
 }
 
-h2 {
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
   color: #38bdf8;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
 }
 
-.services ul {
-  list-style: none;
-  padding: 0;
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-.services li {
-  padding: 12px 0;
-  border-bottom: 1px solid #1e293b;
+.card {
+  background: linear-gradient(145deg, #020617, #020617);
+  padding: 35px;
+  border-radius: 15px;
+  border: 1px solid #1e293b;
+  transition: 0.3s;
 }
 
-.form form {
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #38bdf8;
+}
+
+.card h3 {
+  color: #38bdf8;
+}
+
+/* FORM */
+form {
+  max-width: 600px;
+  margin: auto;
   display: grid;
   gap: 15px;
 }
 
 input, textarea {
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 6px;
+  padding: 14px;
+  border-radius: 8px;
   border: none;
+  font-size: 1rem;
 }
 
 textarea {
-  resize: vertical;
-  min-height: 100px;
+  min-height: 120px;
 }
 
-button {
+form button {
   background: #38bdf8;
   color: #020617;
-  padding: 14px;
-  font-size: 1rem;
+  padding: 15px;
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 30px;
   font-weight: bold;
 }
 
-button:hover {
-  background: #0ea5e9;
-}
-
+/* FOOTER */
 footer {
   background: #020617;
   text-align: center;
-  padding: 30px 20px;
-  font-size: 0.95rem;
-  opacity: 0.9;
+  padding: 40px 20px;
+  border-top: 1px solid #1e293b;
 }
 
 footer a {
   color: #38bdf8;
   text-decoration: none;
 }
-
-footer a:hover {
-  text-decoration: underline;
-}
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero">
   <h1>SecureScan</h1>
-  <p>فحص أمني تعليمي لتحسين حماية المواقع — بموافقة خطية فقط</p>
-</header>
-
-<section>
-  <h2>من نحن</h2>
   <p>
-    SecureScan خدمة مستقلة يقدّمها طالب أمن سيبراني،
-    تهدف إلى مساعدة أصحاب المواقع على اكتشاف الثغرات
-    وتحسين مستوى الحماية بشكل احترافي وقانوني،
-    مع الالتزام التام بعدم استغلال أو تعطيل أي نظام.
+    Professional Cyber Security Audits & Vulnerability Assessment  
+    Helping organizations identify risks and strengthen digital defenses.
+  </p>
+  <button>Request Security Audit</button>
+</div>
+
+<!-- ABOUT -->
+<section>
+  <div class="section-title">
+    <h2>Who We Are</h2>
+  </div>
+  <p style="text-align:center; max-width:800px; margin:auto;">
+    SecureScan is an independent cyber security initiative focused on
+    vulnerability assessment, security auditing, and risk analysis.
+    All testing is performed strictly with written authorization.
   </p>
 </section>
 
-<section class="services">
-  <h2>الخدمات</h2>
-  <ul>
-    <li>✔️ فحص ثغرات تلقائي (Vulnerability Scanning)</li>
-    <li>✔️ تحليل النتائج وتقرير مفصل</li>
-    <li>✔️ توصيات أمنية عملية</li>
-    <li>❌ لا اختراق — لا استغلال — لا تعطيل</li>
-  </ul>
+<!-- SERVICES -->
+<section>
+  <div class="section-title">
+    <h2>Our Services</h2>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Vulnerability Scanning</h3>
+      <p>Automated and manual security assessments to identify weaknesses.</p>
+    </div>
+    <div class="card">
+      <h3>Security Audit</h3>
+      <p>In-depth analysis of configurations, headers, and exposure risks.</p>
+    </div>
+    <div class="card">
+      <h3>Risk Reporting</h3>
+      <p>Clear, professional reports with mitigation recommendations.</p>
+    </div>
+  </div>
 </section>
 
-<section class="form">
-  <h2>طلب فحص أمني</h2>
+<!-- CONTACT -->
+<section>
+  <div class="section-title">
+    <h2>Request an Audit</h2>
+  </div>
+
   <form>
-    <input type="text" placeholder="الاسم الكامل" required>
-    <input type="email" placeholder="البريد الإلكتروني" required>
-    <input type="url" placeholder="رابط الموقع" required>
-    <textarea placeholder="أكّد أنك مالك الموقع أو لديك إذن خطي لإجراء الفحص"></textarea>
-    <button type="submit">إرسال الطلب</button>
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="url" placeholder="Website URL" required>
+    <textarea placeholder="Confirm ownership or written authorization"></textarea>
+    <button type="submit">Submit Request</button>
   </form>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 SecureScan</p>
+  <p>© 2026 SecureScan Cyber Security</p>
   <p>
     📧 Contact:
     <a href="mailto:mahboubayoub2012@gmail.com">
       mahboubayoub2012@gmail.com
     </a>
   </p>
-  <small>يتم تنفيذ أي فحص أمني فقط بعد موافقة صريحة من مالك الموقع</small>
+  <small>Security testing is performed only with explicit authorization.</small>
 </footer>
 
 </body>
 </html>
+
